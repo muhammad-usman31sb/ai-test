@@ -13,6 +13,12 @@ def build_engine_registry(use_stub: bool = True) -> Dict[str, EngineAdapter]:
     if use_stub:
         return {name: StubEngineAdapter(name) for name in SUPPORTED_ENGINES}
 
-    raise NotImplementedError(
-        "Real engine clients are not wired yet. Set --use-stub to run locally/Colab first."
-    )
+    from src.engines.vllm_impl import VLLMEngineAdapter
+    from src.engines.sglang_impl import SGLangEngineAdapter
+    from src.engines.llama_cpp_impl import LlamaCppEngineAdapter
+
+    return {
+        "vllm": VLLMEngineAdapter(),
+        "sglang": SGLangEngineAdapter(),
+        "llama_cpp": LlamaCppEngineAdapter(),
+    }

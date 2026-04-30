@@ -43,8 +43,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--use-stub",
         action="store_true",
-        default=True,
-        help="Use stubbed engine adapters",
+        default=False,
+        help="Use stubbed engine adapters (pass this flag to skip real engine installs)",
     )
     return parser.parse_args()
 

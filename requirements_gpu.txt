@@ -1,0 +1,11 @@
+# Install this file on Colab GPU runtime BEFORE requirements.txt
+# !pip install -r requirements_gpu.txt -q
+
+# Real inference engines
+vllm>=0.4.0
+sglang[all]>=0.3.0
+llama-cpp-python>=0.2.90
+
+# Model download helpers
+huggingface-hub>=0.23.0
+psutil>=5.9.0
