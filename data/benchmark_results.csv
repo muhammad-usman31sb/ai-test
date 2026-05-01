@@ -107,3 +107,233 @@ timestamp_utc,engine,model,input_bucket,output_bucket,input_tokens_target,max_ou
 2026-04-30T15:23:39.387469+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,4,500,70.55890259916558,15.740451229436031,63.09113183856763,2347.978714964894,7925.044066087746,ok,
 2026-04-30T15:23:39.387636+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,1,1500,73.50360126557678,12.804024354101573,77.85439067555377,2000.1015124869382,19266.736108063833,ok,
 2026-04-30T15:23:39.387798+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,4,1500,78.06314420485484,15.07321816445712,66.1585187483628,2262.477771001698,22672.817172726078,ok,
+2026-05-01T09:52:41.042147+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.044226+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.045240+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.046109+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.046932+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.047771+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.048576+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.049454+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.050293+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.051106+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.051877+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.052691+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.053539+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.054386+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.055172+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.056099+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.056952+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.057763+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.058641+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.059534+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.060408+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.061249+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.062031+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.062834+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.063626+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.064442+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.065314+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.066115+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.066904+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.067716+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.068538+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.069337+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.070113+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.070843+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.071671+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.072492+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.073288+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.074132+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.074921+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.075733+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.076529+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.077318+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.078146+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.078927+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.079714+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.080517+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.081329+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.082159+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.082930+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.083778+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.084640+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.085494+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.086347+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:52:41.087242+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T09:53:05.109621+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,1,51,1066.0709750000024,278.5214719600026,3.4017814964143054,1598.35546875,14992.144573000132,ok,
+2026-05-01T09:53:21.324656+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,4,204,96.25298024980111,79.14382012500482,12.58189336521117,1605.3125,16213.775946000169,ok,
+2026-05-01T09:53:53.150964+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,8,408,78.70784375000994,77.98796270250136,12.820171275180982,1619.23046875,31824.847831000625,ok,
+2026-05-01T09:54:35.590282+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,1,501,72.97298100002081,84.7314636179999,11.80526131697716,1620.984375,42438.704789999974,ok,
+2026-05-01T09:57:27.486411+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,4,2004,87.54575099999329,85.77232302500033,11.658291357737381,1627.96875,171894.82905400064,ok,
+2026-05-01T10:03:13.799579+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,8,4008,86.45487212459102,86.40489020100063,11.57340566096212,1641.9296875,346311.1997809992,ok,
+2026-05-01T10:03:24.164128+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,1,104,712.4579450000965,93.70050994174147,10.035112793084402,1643.65625,10363.610468999468,ok,
+2026-05-01T10:10:58.933734+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,4,4985,86.37405125023179,90.33367666407467,10.961620609820717,1650.828125,454768.52168500045,ok,
+2026-05-01T10:29:25.615043+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,8,12008,86.96247100033361,92.16530558149981,10.850477889822281,1652.5859375,1106679.3667460005,ok,
+2026-05-01T10:30:41.752483+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,1,51,71579.65995599989,91.11555280000175,0.6698588937075927,1721.015625,76135.43759599997,ok,
+2026-05-01T10:31:02.871081+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,4,204,119.30563800001437,103.20181002500249,9.660195722165264,1721.03125,21117.584557000555,ok,
+2026-05-01T10:31:44.016154+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,8,408,112.62392862499837,100.60637739749836,9.916501504717411,1726.18359375,41143.54238799933,ok,
+2026-05-01T10:32:37.829102+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,1,501,102.75000499950693,107.41923562400007,9.3101273986634,1726.1875,53812.36781699954,ok,
+2026-05-01T10:36:12.830838+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,4,2004,104.35067050025282,107.2916308519998,9.320901429411988,1726.1875,215000.6643860006,ok,
+2026-05-01T10:41:48.552456+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.554198+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.555328+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.556296+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.557162+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.558020+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.558892+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.559715+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.560577+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.561402+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.562201+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.562989+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.563869+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.564730+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.565621+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.566676+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.567630+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.568523+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.569437+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.570296+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.571165+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.572082+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.572895+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.573697+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.574514+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.575347+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.576248+00:00,vllm,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.577010+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.577822+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.578662+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.579491+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.580298+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.581096+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.581908+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.582714+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.583585+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.584422+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.585254+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.586043+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.586844+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.587622+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.588495+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.589326+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.590130+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.590966+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.591819+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.592645+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.593462+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.594245+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.595088+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.595942+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.596737+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.597565+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:48.598430+00:00,vllm,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Device string must not be empty
+2026-05-01T10:41:54.310701+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,1,51,1077.8010359999826,72.0376956400105,10.898167523090429,1557.10546875,4679.685818000507,ok,
+2026-05-01T10:42:10.863975+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,4,204,85.21141300002455,81.05694013500397,12.32462058935321,1564.0625,16552.233679000892,ok,
+2026-05-01T10:42:43.890262+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,8,408,85.3332048750417,80.85493455999995,12.354411937096524,1577.9765625,33024.63946300031,ok,
+2026-05-01T10:43:26.140576+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,1,501,73.9945909999733,84.35152458200173,11.8580564001644,1579.734375,42249.75688200084,ok,
+2026-05-01T10:46:15.332573+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,4,2004,87.0255569998335,84.4213676000004,11.844613044443442,1586.71875,169190.83742800012,ok,
+2026-05-01T10:51:51.484251+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,8,4008,85.59009650002736,83.8662799155004,11.923254209567036,1600.68359375,336149.8404340019,ok,
+2026-05-01T10:51:59.210588+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,1,104,86.84381300008681,74.16275675728083,13.461724079745611,1602.41796875,7725.607759000013,ok,
+2026-05-01T10:59:32.518720+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,4,4985,90.21686549999686,89.7425589405478,10.99695992831825,1609.59765625,453307.09873399977,ok,
+2026-05-01T11:17:48.427220+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,8,12008,81.33740674986711,91.27132410466668,10.957138250556689,1623.57421875,1095906.588509999,ok,
+2026-05-01T11:19:05.857306+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,1,51,72909.10253199945,90.40219559999969,0.6586661348755111,1705.79296875,77429.21231199944,ok,
+2026-05-01T11:19:26.731775+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,4,204,116.52500725040227,102.03664174499863,9.773190886792566,1712.74609375,20873.428378001336,ok,
+2026-05-01T11:20:07.668039+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,8,408,118.91008974976103,99.95840346000477,9.967108029999505,1726.66796875,40934.642102,ok,
+2026-05-01T11:21:00.598258+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,1,501,103.30150200024946,105.6484609399995,9.465772941482358,1728.42578125,52927.531972,ok,
+2026-05-01T11:24:33.254692+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,4,2004,168.133737250173,105.99132862799979,9.423705949620723,1732.23828125,212655.1922050003,ok,
+2026-05-01T11:31:40.739971+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,8,4008,129.9802941255166,106.61088800574953,9.375802786095306,1732.23828125,427483.3943760022,ok,
+2026-05-01T11:34:31.741807+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,1,1501,102.44485200018971,113.93241506200017,8.77772298399699,1732.26953125,171001.06744500046,ok,
+2026-05-01T11:45:54.961231+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,4,6004,123.93605949910125,113.78707194966714,8.787822413791327,1732.2734375,683218.1759359993,ok,
+2026-05-01T12:08:34.172284+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,8,12008,111.62954162500682,113.19301767383345,8.834548480278078,1732.2734375,1359209.2484190017,ok,
+2026-05-01T12:08:34.233640+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.273090+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.313214+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.353625+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.393107+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.432068+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.473456+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.514304+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:34.553538+00:00,llama_cpp,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8000) exceed context window of 4096
+2026-05-01T12:08:56.706840+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,1,51,3882.0478929992532,163.70198120002897,4.226351116683632,3122.5078125,12067.146953000702,ok,
+2026-05-01T12:09:23.191440+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,4,204,123.13487824985714,129.93597848000718,7.704004529873747,3122.51171875,26479.735209000864,ok,
+2026-05-01T12:10:15.901916+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,8,408,120.57396699970013,129.361093802504,7.74060926090423,3122.51171875,52709.0292569992,ok,
+2026-05-01T12:11:23.416694+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,1,501,116.72281400024076,134.79463567399944,7.420678649494809,3122.51171875,67514.04065099996,ok,
+2026-05-01T12:15:29.434286+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,4,1811,122.54407399996126,135.63626198211887,7.361302419541473,3122.51171875,246016.24777600227,ok,
+2026-05-01T12:23:13.405368+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,8,3429,131.09239150026042,135.28294613895352,7.390583880867049,3131.3203125,463968.75473899854,ok,
+2026-05-01T12:26:51.507090+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,1,1501,123.35142099982477,145.3184084280001,6.882133723931755,3132.7890625,218100.964063,ok,
+2026-05-01T12:39:37.211923+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,4,5268,141.0930497499976,144.4907065810429,6.879947708056933,3138.66015625,765703.4942040008,ok,
+2026-05-01T12:51:24.153917+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,8,4968,136.9028218753101,139.11556282435322,7.027472114398749,3150.40234375,706939.8382700019,ok,
+2026-05-01T12:52:01.188766+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,1,51,28461.599686001136,171.4496778999819,1.3771098152990282,3338.97265625,37034.08358100023,ok,
+2026-05-01T12:52:34.699724+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,4,204,201.46765900017272,163.51896633500473,6.087796063562626,3344.84375,33509.66390300164,ok,
+2026-05-01T12:53:41.732828+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,8,408,167.16415037512888,164.23471617750238,6.086717856524394,3356.58984375,67031.19967400198,ok,
+2026-05-01T12:55:10.060252+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,1,501,153.55250100037665,176.34647011999914,5.672118434670808,3358.0625,88326.78756099995,ok,
+2026-05-01T13:01:02.389652+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,4,2004,187.22465324981385,175.78963610250048,5.687878988919091,3358.0625,352328.1708180002,ok,
+2026-05-01T13:12:42.444122+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,8,4008,165.973938374691,174.68118353425052,5.725284679621602,3358.0625,700052.5256439997,ok,
+2026-05-01T13:17:19.133187+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,1,1501,177.77436000142188,184.34038807800002,5.424875911338772,3358.0625,276688.35647700145,ok,
+2026-05-01T13:35:39.718892+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,4,6004,198.819693000587,183.2981283538341,5.455285315127047,3358.0625,1100584.048895007,ok,
+2026-05-01T14:12:25.127274+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,8,12008,171.50755925058547,183.6691330125832,5.444813176741796,3358.0625,2205401.6566250026,ok,
+2026-05-01T14:12:25.148142+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.161553+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.174907+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.188792+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.202907+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.216494+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.229969+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.243498+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:25.257178+00:00,llama_cpp,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,Requested tokens (8001) exceed context window of 4096
+2026-05-01T14:12:36.822208+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.827310+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.831700+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,brief,10,50,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.835568+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.840063+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.843398+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,standard,10,500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.847113+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.851524+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.854648+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,short,long,10,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.857731+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.862148+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.865628+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,brief,500,50,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.868758+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.872108+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.876462+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,standard,500,500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.879685+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.882978+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.886372+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,medium,long,500,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.891299+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.894951+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.898647+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.902228+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.907273+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.910831+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.914164+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.917556+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.921012+00:00,sglang,Qwen/Qwen2.5-0.5B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.925432+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.928678+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.931846+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,brief,10,50,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.935214+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.939951+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.943417+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,standard,10,500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.946719+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.950032+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.954641+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,short,long,10,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.958074+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.961464+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.964811+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,brief,500,50,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.968412+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.973781+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.977263+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,standard,500,500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.980698+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.984175+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.987560+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,medium,long,500,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.992349+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.995748+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:36.999361+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,brief,2000,50,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:37.003036+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:37.006636+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:37.011709+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,standard,2000,500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:37.015379+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,1,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:37.018886+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,4,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
+2026-05-01T14:12:37.022368+00:00,sglang,meta-llama/Llama-3.2-1B-Instruct,long,long,2000,1500,8,0,0.0,0.0,0.0,0.0,0.0,error,No module named 'sgl_kernel'
