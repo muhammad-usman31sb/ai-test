@@ -1,45 +1,60 @@
-# LLM Inference Engine Router - Colab-Friendly Starter
+# LLM Inference Engine Router
 
-This project is a practical starter implementation for the take-home assignment.
-It lets you:
+Benchmarks three LLM inference engines (vLLM, SGLang, llama.cpp) across multiple models,
+input/output lengths, and batch sizes, then routes incoming requests to the optimal engine
+based on real measured performance data.
 
-- Run benchmark experiments across engine/model/input/output/batch configurations.
-- Save all runs to `data/benchmark_results.csv`.
-- Route an incoming request to the best engine based on benchmark data.
-- Use either CLI or FastAPI for the router interface.
+## Project Structure
 
-## 1) Assignment Coverage
+```
+src/benchmark/   benchmark matrix and execution harness
+src/engines/     engine adapters (vLLM, SGLang, llama.cpp, stub)
+src/router/      routing decision logic
+src/common/      shared models and utilities
+scripts/         CLI and API entrypoints
+data/            benchmark_results.csv and benchmark_chart.png
+notebooks/       run_all.ipynb - end-to-end Colab notebook
+```
 
-- Part 1 (Benchmark): implemented via `scripts/run_benchmarks.py`.
-- Part 2 (Router): implemented via `scripts/router_cli.py` and `scripts/router_api.py`.
-- Deliverables:
-  - CSV output: `data/benchmark_results.csv`
-  - Full code: this repository
-  - README: this file
-  - Optional chart: generate in notebook or Python script from CSV
-
-## 2) Colab Setup (No Local GPU Needed)
-
-In Google Colab:
-
-1. Runtime -> Change runtime type -> GPU (if available).
-2. Clone/upload this project folder.
-3. Install dependencies:
+## Setup (Colab GPU Runtime)
 
 ```bash
+# 1. Clone repo
+git clone https://github.com/muhammad-usman31sb/ai-test.git
+cd ai-test
+
+# 2. Install GPU engines
+pip install -r requirements_gpu.txt
+
+# 3. Install base requirements
 pip install -r requirements.txt
 ```
 
-4. Run benchmark (stub engines for starter validation):
-
-```bash
-python -m scripts.run_benchmarks --use-stub
+Or open the all-in-one notebook directly:
+```
+https://colab.research.google.com/github/muhammad-usman31sb/ai-test/blob/main/notebooks/run_all.ipynb
 ```
 
-5. Run router CLI:
+## Running the Benchmark
 
 ```bash
-python -m scripts.router_cli \
+# Real engines (requires GPU runtime)
+python3 -m scripts.run_benchmarks \
+  --engines vllm llama_cpp sglang \
+  --batch-sizes 1 4 8 \
+  --repeats 1
+
+# Stub mode (no GPU required, for local development)
+python3 -m scripts.run_benchmarks --use-stub
+```
+
+Writes results incrementally to `data/benchmark_results.csv` after every case.
+
+## Running the Router
+
+**CLI:**
+```bash
+python3 -m scripts.router_cli \
   --benchmark-csv data/benchmark_results.csv \
   --model Qwen/Qwen2.5-0.5B-Instruct \
   --input-tokens 500 \
@@ -48,70 +63,59 @@ python -m scripts.router_cli \
   --priority latency
 ```
 
-6. Run router API:
-
+**API:**
 ```bash
 uvicorn scripts.router_api:app --host 0.0.0.0 --port 8000
+# Swagger UI: http://localhost:8000/docs
 ```
 
-## 3) Project Structure
+## Benchmark Results
 
-- `src/benchmark/`: benchmark matrix and execution harness
-- `src/engines/`: engine abstraction and starter adapter factory
-- `src/router/`: decision logic for routing
-- `src/common/`: shared models and utility code
-- `scripts/`: executable entrypoints
-- `data/`: benchmark CSV outputs
+Benchmarks were run on Google Colab T4 GPU using real engine adapters across:
+- 2 models: `Qwen/Qwen2.5-0.5B-Instruct`, `meta-llama/Llama-3.2-1B-Instruct`
+- 3 input lengths: short (~10 tokens), medium (~500 tokens), long (~2000 tokens)
+- 3 output lengths: brief (50), standard (500), long (1500)
+- 3 batch sizes: 1, 4, 8
 
-## 4) What Is Stubbed vs Real
+### Average Metrics by Engine
 
-Current code uses `StubEngineAdapter` for quick end-to-end development.
-This is intentional so you can run everything immediately on free Colab.
+| Engine    | TTFT (ms) | TPOT (ms) | Throughput (tok/s) | Peak Memory (MB) |
+|-----------|----------:|----------:|-------------------:|-----------------:|
+| vllm      |      49.2 |       9.4 |              104.7 |             2767 |
+| sglang    |      58.0 |      11.4 |               86.1 |             2547 |
+| llama_cpp |    2180.0 |      75.9 |               33.4 |             2195 |
 
-To complete the final assignment with real inference engines:
+Full results: [`data/benchmark_results.csv`](data/benchmark_results.csv)
+Visualization: [`data/benchmark_chart.png`](data/benchmark_chart.png)
 
-- Replace `build_engine_registry(use_stub=False)` in `src/engines/factory.py`.
-- Add real clients for:
-  - vLLM
-  - SGLang
-  - llama.cpp
-- Ensure each adapter returns:
-  - TTFT
-  - TPOT
-  - throughput
-  - peak memory
+## Router Decisioning Logic
 
-## 5) Router Decisioning Logic
+The router uses a **benchmark-lookup strategy**: it finds the closest matching benchmark
+row for the incoming request and returns the engine with the best measured performance.
 
-The router currently does a benchmark-lookup strategy:
+### Step 1 - Bucket mapping
+Token counts are mapped to assignment buckets:
+- Input: short (<=100 tokens), medium (<=1000 tokens), long (>1000 tokens)
+- Output: brief (<=100 tokens), standard (<=1000 tokens), long (>1000 tokens)
 
-- Convert request token counts into assignment buckets:
-  - input: short/medium/long
-  - output: brief/standard/long
-- Filter benchmark rows by:
-  - model
-  - input/output bucket
-  - batch size
-  - optional memory limit
-- Choose best engine:
-  - `priority=latency`: minimize `ttft_ms + tpot_ms`
-  - `priority=throughput`: maximize `throughput_tok_per_sec`
-- Return selected engine, predicted metrics, and reason string.
+### Step 2 - Filtering
+Benchmark rows are filtered by: model, input bucket, output bucket, batch size.
+An optional `memory_limit_mb` field further excludes engines that exceed memory budget.
 
-This is simple, deterministic, and easy to explain in your write-up.
+### Step 3 - Engine selection
 
-## 6) Suggested Next Steps to Finalize Submission
+| Priority     | Strategy                          |
+|--------------|-----------------------------------|
+| `latency`    | minimize `ttft_ms + tpot_ms`      |
+| `throughput` | maximize `throughput_tok_per_sec` |
 
-1. Integrate real engines in `src/engines`.
-2. Run at least one full matrix for two models on Colab GPU.
-3. Save `data/benchmark_results.csv` from real runs.
-4. Add one visualization chart from the CSV.
-5. Document runtime limits and assumptions in analysis section.
+### Step 4 - Response
+Returns selected engine, predicted metrics from the matching benchmark row, and a
+human-readable reason string with a percentage improvement over the next best option.
 
-## 7) Example JSON I/O for Router
+### Example
 
-Input:
-
+Request:
 ```json
 {
   "model": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -122,17 +126,38 @@ Input:
 }
 ```
 
-Output:
-
+Response:
 ```json
 {
   "engine": "vllm",
   "predicted_metrics": {
-    "ttft_ms": 45.0,
-    "tpot_ms": 12.0,
-    "throughput_tok_per_sec": 280.0,
-    "peak_memory_mb": 2048.0
+    "ttft_ms": 53.2,
+    "tpot_ms": 10.3,
+    "throughput_tok_per_sec": 95.9,
+    "peak_memory_mb": 3002.3
   },
-  "reason": "vllm selected for latency (12.4% lower TTFT+TPOT score)."
+  "reason": "vllm selected for latency (18.4% lower TTFT+TPOT score)."
 }
 ```
+
+### Key findings from benchmark data
+
+- **vLLM** consistently wins on latency and throughput across all configurations.
+  Its continuous batching and PagedAttention make it the best general-purpose choice.
+- **SGLang** is competitive with vLLM (~15% higher latency) but uses ~8% less memory,
+  making it preferable under tight memory constraints.
+- **llama.cpp** has very high TTFT (~44x vs vLLM) because it runs sequentially without
+  native batching support. It uses the least memory (~2195 MB avg) and is the only
+  option when CUDA is unavailable.
+
+### Limitations
+
+- llama.cpp batch size is simulated (sequential runs) - true parallel batching is not supported.
+- TTFT is measured via a single-token prefill proxy, not streamed token timestamps.
+- Results are from a single Colab T4 session; variance across runs may exist.
+
+### Future improvements
+
+- Replace lookup with a regression model trained on benchmark data for interpolated predictions.
+- Add confidence score to router output.
+- Support mixed-priority routing (e.g. latency within a memory budget).
