@@ -179,9 +179,3 @@ Response:
 - **llama.cpp batch size is simulated** (sequential runs) — true parallel batching is not supported.
 - **TTFT is a proxy:** measured via a single-token prefill call, not from first-byte streaming timestamps.
 - Results are from a single Colab T4 session; variance across runs may exist.
-
-### Future improvements
-
-- Replace lookup with a regression model trained on benchmark data for interpolated predictions.
-- Add confidence score to router output.
-- Support mixed-priority routing (e.g. latency within a memory budget).
