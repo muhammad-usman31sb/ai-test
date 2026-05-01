@@ -71,19 +71,35 @@ uvicorn scripts.router_api:app --host 0.0.0.0 --port 8000
 
 ## Benchmark Results
 
-Benchmarks were run on Google Colab T4 GPU using real engine adapters across:
+Benchmarks were run on Google Colab T4 GPU. The intended matrix was:
 - 2 models: `Qwen/Qwen2.5-0.5B-Instruct`, `meta-llama/Llama-3.2-1B-Instruct`
 - 3 input lengths: short (~10 tokens), medium (~500 tokens), long (~2000 tokens)
 - 3 output lengths: brief (50), standard (500), long (1500)
 - 3 batch sizes: 1, 4, 8
 
-### Average Metrics by Engine
+**338 cases attempted, 158 succeeded (47%).** Failure breakdown by engine:
 
-| Engine    | TTFT (ms) | TPOT (ms) | Throughput (tok/s) | Peak Memory (MB) |
-|-----------|----------:|----------:|-------------------:|-----------------:|
-| vllm      |      49.2 |       9.4 |              104.7 |             2767 |
-| sglang    |      58.0 |      11.4 |               86.1 |             2547 |
-| llama_cpp |    2180.0 |      75.9 |               33.4 |             2195 |
+| Engine    | Attempted | OK  | Errors | Primary failure cause                         |
+|-----------|----------:|----:|-------:|-----------------------------------------------|
+| vllm      |       144 |  36 |    108 | "Device string must not be empty" (2nd model + batch=8) |
+| sglang    |        90 |  36 |     54 | `No module named 'sgl_kernel'` (batch=8 + 2nd model) |
+| llama_cpp |       104 |  86 |     18 | Context window exceeded for long output (>4096 tokens) |
+
+As a result, vLLM and SGLang averages below are based on `Qwen/Qwen2.5-0.5B-Instruct`
+with batch sizes 1 and 4 only. llama_cpp covers both models and all three batch sizes
+(where output fit in the 4096-token context window).
+
+### Average Metrics by Engine (successful runs)
+
+| Engine    | OK runs | TTFT (ms) | TPOT (ms) | Throughput (tok/s) | Peak Memory (MB) |
+|-----------|--------:|----------:|----------:|-------------------:|-----------------:|
+| vllm      |      36 |      49.2 |       9.4 |              104.7 |             2767 |
+| sglang    |      36 |      58.0 |      11.4 |               86.1 |             2547 |
+| llama_cpp |      86 |    2180.0 |      75.9 |               33.4 |             2195 |
+
+> **Note:** Averages are not directly comparable across engines because vLLM/SGLang
+> were only measured on a single smaller model (Qwen 0.5B) with batch sizes 1–4,
+> while llama_cpp includes both models and larger batch sizes.
 
 Full results: [`data/benchmark_results.csv`](data/benchmark_results.csv)
 Visualization: [`data/benchmark_chart.png`](data/benchmark_chart.png)
@@ -152,8 +168,16 @@ Response:
 
 ### Limitations
 
-- llama.cpp batch size is simulated (sequential runs) - true parallel batching is not supported.
-- TTFT is measured via a single-token prefill proxy, not streamed token timestamps.
+- **Incomplete benchmark coverage:** vLLM failed with "Device string must not be empty" on the
+  second model (`meta-llama/Llama-3.2-1B-Instruct`) and on batch size 8, likely due to GPU memory
+  exhaustion or driver reinitialization after the first model was loaded. SGLang failed on batch=8
+  and the second model due to a missing `sgl_kernel` native extension on the Colab T4 image.
+- **llama.cpp context window:** Long-output cases (target 1500 tokens, batch 4–8) exceeded the
+  default 4096-token context window and were skipped.
+- **Non-comparable averages:** Because failure patterns differ per engine, the average metrics table
+  covers different subsets of the test matrix. vLLM/SGLang numbers are Qwen-0.5B + batch≤4 only.
+- **llama.cpp batch size is simulated** (sequential runs) — true parallel batching is not supported.
+- **TTFT is a proxy:** measured via a single-token prefill call, not from first-byte streaming timestamps.
 - Results are from a single Colab T4 session; variance across runs may exist.
 
 ### Future improvements
