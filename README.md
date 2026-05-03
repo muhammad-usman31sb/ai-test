@@ -35,6 +35,23 @@ Or open the all-in-one notebook directly:
 https://colab.research.google.com/github/muhammad-usman31sb/ai-test/blob/main/notebooks/run_all.ipynb
 ```
 
+## Notebook: run_all.ipynb
+
+`notebooks/run_all.ipynb` is a self-contained 8-cell Colab notebook that covers the full workflow:
+
+| Cell | What it does |
+|------|--------------|
+| 1 | Clone the repo (or `git pull` if already present) |
+| 2 | Install GPU engines (`requirements_gpu.txt`) |
+| 3 | Install base requirements (`requirements.txt`) |
+| 4 | Run the full benchmark matrix (vLLM, SGLang, llama.cpp) |
+| 5 | Verify results — row counts, status breakdown, per-engine averages |
+| 6 | Generate and save a 4-panel summary chart (`data/benchmark_chart.png`) |
+| 7 | Test the router CLI for both `latency` and `throughput` priorities |
+| 8 | Push `benchmark_results.csv` and `benchmark_chart.png` back to GitHub via PAT prompt |
+
+Run cells top-to-bottom. No Google Drive or local GPU required.
+
 ## Running the Benchmark
 
 ```bash
