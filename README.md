@@ -50,7 +50,7 @@ https://colab.research.google.com/github/muhammad-usman31sb/ai-test/blob/main/no
 | 7 | Test the router CLI for both `latency` and `throughput` priorities |
 | 8 | Push `benchmark_results.csv` and `benchmark_chart.png` back to GitHub via PAT prompt |
 
-Run cells top-to-bottom. No Google Drive or local GPU required.
+Run cells top-to-bottom.
 
 ## Running the Benchmark
 
